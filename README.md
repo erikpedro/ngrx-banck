@@ -25,3 +25,34 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+JWKS PÚBLICO (cole no formulário):
+{
+  "keys": [
+    {
+      "kty": "EC",
+      "x": "drAa64hQjBWuR70Vb5XkgcvC3pBxwzfYLpq26WxRfCE",
+      "y": "U17wrvf0VYfQvCh2r6-h2psisCP7u2BWStbzgRojrQc",
+      "crv": "P-256",
+      "use": "sig",
+      "alg": "ES256",
+      "kid": "ngrx-banck-dev-1"
+    }
+  ]
+}
+
+>>> GUARDE A CHAVE PRIVADA (NÃO COLAR NO FORM) <<<
+{
+  "kty": "EC",
+  "x": "drAa64hQjBWuR70Vb5XkgcvC3pBxwzfYLpq26WxRfCE",
+  "y": "U17wrvf0VYfQvCh2r6-h2psisCP7u2BWStbzgRojrQc",
+  "crv": "P-256",
+  "d": "yUphikVDj6iyBRcHV_YHX7yiYg-zKu_ISlBfDHEtU20",
+  "use": "sig",
+  "alg": "ES256",
+  "kid": "ngrx-banck-dev-1"
+}
+

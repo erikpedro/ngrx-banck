@@ -1,0 +1,31 @@
+.nbk-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  height: 64px;
+  background: linear-gradient(90deg, #8A05BE, #4B0FB8);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(138,5,190,0.25);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.spacer { flex: 1 1 auto; }
+
+@media (max-width: 599px) {
+  .nbk-toolbar { height: 56px; }
+  .brand-name { font-size: 15px; }
+}

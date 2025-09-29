@@ -1,1 +1,27 @@
-<p>shell works!</p>
+<app-topbar></app-topbar>
+
+<!-- NAV DESKTOP -->
+<nav class="top-pills" *ngIf="!(isHandset$ | async)" aria-label="Navegação principal">
+  <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="active" class="pill">
+    <mat-icon class="pill-icon">{{ link.icon }}</mat-icon>
+    <span class="pill-label">{{ link.label }}</span>
+  </a>
+</nav>
+
+<!-- BREADCRUMB (desktop) -->
+<app-breadcrumbs *ngIf="!(isHandset$ | async)"></app-breadcrumbs>
+
+<main class="app-content" tabindex="-1" aria-label="Conteúdo principal">
+  <!--  TÍTULO DINÂMICO -->
+  <h1 class="page-title">{{ (pageTitle$ | async) || ' ' }}</h1>
+
+  <router-outlet></router-outlet>
+</main>
+
+<!-- BOTTOM NAV MOBILE -->
+<mat-toolbar class="bottom-nav" *ngIf="(isHandset$ | async)" color="primary" role="navigation">
+  <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="active" class="bottom-item">
+    <mat-icon>{{ link.icon }}</mat-icon>
+    <span class="label">{{ link.label }}</span>
+  </a>
+</mat-toolbar>

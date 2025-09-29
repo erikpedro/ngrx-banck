@@ -1,0 +1,20 @@
+.crumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 16px 0 16px;
+  color: var(--nbk-text-dim, #2e2e30);
+  font-size: 13px;
+}
+
+.crumb {
+  text-decoration: none;
+  color: inherit;
+  opacity: .95;
+}
+
+.crumb:hover { text-decoration: underline; }
+.current { color: var(--nbk-text, #4f5052); font-weight: 600; }
+.sep { opacity: .5; }
+.root { opacity: .85; }

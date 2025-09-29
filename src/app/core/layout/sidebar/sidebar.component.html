@@ -1,1 +1,19 @@
-<p>sidebar works!</p>
+<nav class="sidebar-nav" aria-label="Navegação principal">
+  <mat-nav-list>
+    <a mat-list-item routerLink="/organizacao" routerLinkActive="active" (click)="onNavigate()">
+      <mat-icon matListIcon>account_tree</mat-icon>
+      <span matLine>Organização</span>
+    </a>
+
+    <a mat-list-item routerLink="/transacoes" routerLinkActive="active" (click)="onNavigate()">
+      <mat-icon matListIcon>sync_alt</mat-icon>
+      <span matLine>Transações</span>
+    </a>
+
+    <a mat-list-item routerLink="/relatorios" routerLinkActive="active" (click)="onNavigate()">
+      <mat-icon matListIcon>analytics</mat-icon>
+      <span matLine>Relatórios</span>
+    </a>
+  </mat-nav-list>
+</nav>
+

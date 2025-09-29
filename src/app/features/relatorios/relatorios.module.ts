@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { RelatoriosRoutingModule } from './relatorios-routing.module';
 import { RelatoriosHomeComponent } from './pages/relatorios-home/relatorios-home.component';
-
+import { RelatoriosRoutingModule } from './relatorios-routing.module';
 
 @NgModule({
-  declarations: [
-    RelatoriosHomeComponent
-  ],
-  imports: [
-    CommonModule,
-    RelatoriosRoutingModule
-  ]
+  declarations: [RelatoriosHomeComponent],
+  imports: [CommonModule, RelatoriosRoutingModule],
 })
-export class RelatoriosModule { }
+export class RelatoriosModule {}

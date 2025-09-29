@@ -1,0 +1,15 @@
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ng-container *ngIf="(crumbs$ | async) as crumbs">
+    <a class="crumb root" routerLink="/">Início</a>
+    <span class="sep">/</span>
+
+    <ng-container *ngFor="let c of crumbs; let i = index">
+      <ng-container *ngIf="!c.last">
+        <a class="crumb" [routerLink]="c.url">{{ c.label }}</a>
+        <span class="sep">/</span>
+      </ng-container>
+
+      <span *ngIf="c.last" class="crumb current" aria-current="page">{{ c.label }}</span>
+    </ng-container>
+  </ng-container>
+</nav>

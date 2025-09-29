@@ -1,0 +1,44 @@
+<!-- src/app/features/transacoes/components/filtros/filtros.component.html -->
+<form [formGroup]="form" class="f-grid">
+  <!-- Período -->
+  <mat-form-field appearance="fill">
+    <mat-label>Início</mat-label>
+    <input matInput [matDatepicker]="pInicio" formControlName="inicio">
+    <mat-datepicker-toggle matSuffix [for]="pInicio"></mat-datepicker-toggle>
+    <mat-datepicker #pInicio></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fim</mat-label>
+    <input matInput [matDatepicker]="pFim" formControlName="fim">
+    <mat-datepicker-toggle matSuffix [for]="pFim"></mat-datepicker-toggle>
+    <mat-datepicker #pFim></mat-datepicker>
+  </mat-form-field>
+
+  <!-- Origem -->
+  <div class="row">
+    <span class="label">Origem</span>
+    <mat-button-toggle-group formControlName="origem" class="btg">
+      <mat-button-toggle value="TODOS">Todos</mat-button-toggle>
+      <mat-button-toggle value="ATM">ATM</mat-button-toggle>
+      <mat-button-toggle value="CAIXA">Caixa</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <!-- Tipos -->
+  <mat-form-field appearance="fill" class="full">
+    <mat-label>Tipos</mat-label>
+    <mat-select formControlName="tipos" multiple>
+      <mat-option *ngFor="let t of tipoOptions" [value]="t">{{ t }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Ações -->
+  <div class="actions">
+    <button mat-stroked-button type="button" (click)="form.reset()">Limpar</button>
+    <button mat-flat-button color="primary" type="button" (click)="onApply()">
+      <mat-icon>filter_alt</mat-icon>
+      <span>Aplicar</span>
+    </button>
+  </div>
+</form>

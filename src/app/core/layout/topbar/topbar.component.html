@@ -1,1 +1,19 @@
-<p>topbar works!</p>
+<mat-toolbar class="nbk-toolbar" role="banner">
+  <div class="brand">
+    <mat-icon class="brand-icon" aria-hidden="true">account_balance_wallet</mat-icon>
+    <span class="brand-name" aria-label="Ngrx Banck">Ngrx Banck</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <!-- Ações rápidas (ex.: modo escuro + perfil) -->
+  <button mat-icon-button aria-label="Ajuda">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Notificações">
+    <mat-icon>notifications_none</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Perfil">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
